@@ -7,7 +7,7 @@ const initialState = {
   error: null,
 };
 
-export const contactsSlice = (createSlice = createSlice({
+export const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
   extraReducers: {
@@ -46,7 +46,7 @@ export const contactsSlice = (createSlice = createSlice({
       store.error = payload;
     },
   },
-}));
+});
 
 export const { actions: contactActions, reducer: contactsReducer } =
   contactsSlice;
