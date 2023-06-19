@@ -1,7 +1,7 @@
 import UserContact from '../userContact/UserContact';
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
-import { deleteContact } from '../../redux/contactSlice';
+import { contactActions } from '../../redux/contactSlice';
 import css from './ContactList.module.css';
 
 const ContactList = () => {
@@ -20,7 +20,7 @@ const ContactList = () => {
           <UserContact name={name} number={number} />
           <button
             className={css.btn}
-            onClick={() => dispatch(deleteContact(id))}
+            onClick={() => dispatch(contactActions.deleteContact(id))}
           >
             Delete
           </button>
